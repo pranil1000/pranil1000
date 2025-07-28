@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Vehicle {
+            move () {
+                console.log("Vehicle is moving");
+            }
+        }
+        class Car extends Vehicle{
+            move() {
+                super.move();
+                console.log("Car is driving");
+            }
+        }
+        const myCar = new Car();
+        myCar.move();
+    </script>
+</body>
+</html>

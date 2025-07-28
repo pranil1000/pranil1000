@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- <input type="text" name="Fullname" placeholder="Enter your name" required>
+    <input type="text" pattern="[A-Za-z] {3,}" placeholder="Min 3 letter only">
+    <input type ="email" required>
+        <input type ="number" min="1" max="1000"> -->
+        <form id="myForm">
+            <label>email:
+                <input type="email" required>
+            </label><br><br>
+
+            <label>Password (min 6 chars, at least 1 number):
+                <input type="password" pattern="(?=.*\d).{6.}" required>
+            </label><br><br>
+            <button type="submit">submit</button>
+        </form>
+        <script>
+            function checkValidity(){
+
+            }
+            document.getElementById("password").value()
+            document.getElementById("myForm").addEventListener("submit",function (e) {
+                if (!this .checkValidityty()){
+                    alert("Please fix the error in the form.");
+                    e.preventDefault();
+                }else{
+                    alert("Form submitted successfully!");
+                }
+            });
+
+        </script>
+</body>
+</html> 

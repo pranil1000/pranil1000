@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Basic</title>
+</head>
+<body>
+    <p>Async basic</p>
+    <script>
+        async function greet(){
+            return "Hello Async world";
+        }
+        greet().then(console.log);
+    </script>
+    <script>
+        function delay(ms) {
+            return new Promise((resolve) => setTimeout(resolve,ms));
+        }
+        async function run () {
+            console.log("start");
+            await delay(1000);
+            console.log("end");
+        }
+        run();
+        console.log("outside"); 
+    </script>
+</body>
+</html>

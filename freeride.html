@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //save data
+        localStorage.setItem("theme", "dark");
+        //get data
+        const theme = localStorage.getItem("theme");
+        console.log(theme);//"dark"
+        //remove item
+        localStorage.removeItem("theme");
+        //clear all
+        localStorage.clear();
+        //sessionStorage
+        sessionStorage.setItem("pagVisit", "ture");
+        if (sessionStorage.getItem("pageVisit")){
+            console.log("You've visited this page in this session.");
+        } 
+        //string store
+        const user = {
+            name: "Sita",
+            agr: 25
+        };
+        localStorage.setItem("user", JSON.stringify(user));
+        const storedUser = JSON.parse(localStorage.getItem("user"));
+        console.log(storedUser.name);
+         
+    </script>
+</body>
+</html>

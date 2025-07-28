@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <button onclick="addItem()">Add Item</button>
+     <button onclick="removeItem()">Remove Item</button>
+    <script>
+        function addItem(){
+            const newPara = document.createElement("p");//new create only variable
+            newPara.textContent = "I am a new paragraph!";
+            newPara.id = "newItem";
+            document.getElementById("container").appendChild(newPara);//change garcha appendchild le
+        }
+        function removeItem(){
+            const item = document.getElementById("newItem");
+            if(item){
+                item.remove();
+            }
+        }
+    </script>
+</body>
+</html>

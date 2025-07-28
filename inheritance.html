@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class User{
+            constructor(name, email1){
+                this.name = name;
+                this.email1 = email1;
+            }
+            greet(){
+                console.log('Welcome, ${this.name}!');
+            }
+        }
+        const user1 = new User("Sita", "sita@123.com");
+        user1.greet();
+
+    class Admin extends User{
+        constructor(name, email, role){//consturtor starting work
+            super(name, email);//parent class ko consturtor run garna
+            this.role = role;
+         }
+         deleteUser(user){
+            console.log(`${this.name} deleted ${user.name}`);
+         }
+    }
+     const user = new User("Sita", "sita@123.com");
+    const admin = new Admin("Bob", "bob@exmple.com", "Super Admin");
+    admin.greet();
+    admin.deleteUser(user);
+</script>
+   
+</body>
+</html>

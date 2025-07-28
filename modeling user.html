@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class user{
+            constructor(name, email1){
+                this.name = name;
+                this.email1 = email1;
+            }
+            greet(){
+                console.log('Welcome, ${this.name}!');
+            }
+        }
+        const user1 = new User("Sita", "sita@123.com");
+        user1.greet();
+    </script>
+</body>
+</html>
